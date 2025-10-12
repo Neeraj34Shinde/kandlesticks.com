@@ -781,6 +781,10 @@ video {
   margin-bottom: 40px;
 }
 
+.mb-\[48px\] {
+  margin-bottom: 48px;
+}
+
 .mb-\[6px\] {
   margin-bottom: 6px;
 }
@@ -957,10 +961,6 @@ video {
   margin-top: 59px;
 }
 
-.mb-\[48px\] {
-  margin-bottom: 48px;
-}
-
 .block {
   display: block;
 }
@@ -1095,10 +1095,6 @@ video {
   min-width: 260px;
 }
 
-.min-w-\[300px\] {
-  min-width: 300px;
-}
-
 .min-w-full {
   min-width: 100%;
 }
@@ -1134,6 +1130,10 @@ video {
 
 .max-w-\[270px\] {
   max-width: 270px;
+}
+
+.max-w-\[300px\] {
+  max-width: 300px;
 }
 
 .max-w-\[310px\] {
@@ -1187,10 +1187,6 @@ video {
 
 .max-w-xl {
   max-width: 36rem;
-}
-
-.max-w-\[300px\] {
-  max-width: 300px;
 }
 
 .flex-shrink {
@@ -1307,6 +1303,10 @@ video {
 
 .justify-start {
   justify-content: flex-start;
+}
+
+.\!justify-start {
+  justify-content: flex-start !important;
 }
 
 .justify-center {
@@ -1684,6 +1684,11 @@ video {
   padding-bottom: 20px;
 }
 
+.py-\[2px\] {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
 .py-\[56px\] {
   padding-top: 56px;
   padding-bottom: 56px;
@@ -1702,11 +1707,6 @@ video {
 .py-\[7px\] {
   padding-top: 7px;
   padding-bottom: 7px;
-}
-
-.py-\[2px\] {
-  padding-top: 2px;
-  padding-bottom: 2px;
 }
 
 .\!pb-0 {
@@ -1807,6 +1807,10 @@ video {
 
 .text-left {
   text-align: left;
+}
+
+.\!text-left {
+  text-align: left !important;
 }
 
 .text-center {
@@ -1983,6 +1987,14 @@ video {
   font-weight: 500;
 }
 
+.\!font-bold {
+  font-weight: 700 !important;
+}
+
+.\!font-semibold {
+  font-weight: 600 !important;
+}
+
 .font-\[900\] {
   font-weight: 900;
 }
@@ -2005,14 +2017,6 @@ video {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.\!font-bold {
-  font-weight: 700 !important;
-}
-
-.\!font-semibold {
-  font-weight: 600 !important;
 }
 
 .uppercase {
@@ -2045,6 +2049,10 @@ video {
 
 .leading-\[1\.28\] {
   line-height: 1.28;
+}
+
+.leading-\[1\.2\] {
+  line-height: 1.2;
 }
 
 .leading-\[1\.30\] {
@@ -2089,30 +2097,6 @@ video {
 
 .leading-none {
   line-height: 1;
-}
-
-.leading-\[\] {
-  line-height: ;
-}
-
-.leading-\[20px\] {
-  line-height: 20px;
-}
-
-.leading-\[24px\] {
-  line-height: 24px;
-}
-
-.leading-\[26px\] {
-  line-height: 26px;
-}
-
-.leading-\[px\] {
-  line-height: px;
-}
-
-.leading-\[1\.2\] {
-  line-height: 1.2;
 }
 
 .tracking-\[-0\.5px\] {
