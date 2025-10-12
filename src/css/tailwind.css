@@ -1709,6 +1709,21 @@ video {
   padding-bottom: 7px;
 }
 
+.px-\[28px\] {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.px-\[px\] {
+  padding-left: px;
+  padding-right: px;
+}
+
+.px-\[34px\] {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
 .\!pb-0 {
   padding-bottom: 0px !important;
 }
@@ -3403,6 +3418,11 @@ button:disabled {
   .md\:my-3 {
     margin-top: 24px;
     margin-bottom: 24px;
+  }
+
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .md\:mb-0 {
