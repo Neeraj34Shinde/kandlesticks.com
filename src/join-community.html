@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KandleSticks</title>
+  <meta name="description" content="Learn with KandleSticks!
+  We believe that, you can also be a pro trader">
+  <meta property="og:title" content="KandleSticks">
+  <meta property="og:description" content="Learn with KandleSticks!
+  We believe that, you can also be a pro trader">
+  <meta property="og:image" content="https://www.kandlesticks.com/img/praveen-logo-cropped.png">
+  <link rel="icon" type="image/x-icon" href="https://www.kandlesticks.com/img/praveen-logo-cropped.png">
+  <meta property="og:url" content="https://www.kandlesticks.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tailwind.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fa;
+    color: #30343f;
+    line-height: 1.6;
+  }
+
+  /* Container */
+  .contain {
+    max-width: 900px;
+    margin: 48px auto 64px;
+    padding: 0 20px;
+  }
+
+  /* Section Cards */
+  section.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px 32px 32px;
+    box-shadow: 0 8px 24px rgb(107 119 180 / 0.06);
+    margin-bottom: 48px;
+    border: 1px solid #e9ecef;
+  }
+
+  section.card h2 {
+    font-weight: 600 !important;
+    font-size: 1.52rem !important;
+    color: #2389db;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  section.gridy {
+   
+    margin-bottom: 48px;
+    
+  }
+
+  section.gridy h2 {
+    font-weight: 600 !important;
+    font-size: 1.52rem !important;
+    color: #2389db;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  section.card h2 i {
+    color: #41c46a;
+    font-size: 1.5rem !important;
+  }
+
+  section.card p,
+  section.card ul {
+    font-size: 1.1rem !important;
+    color: #30343f;
+  }
+
+  section.card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 12px;
+  }
+
+  section.card ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 14px;
+    font-weight: 500 !important;
+    color: #495057;
+  }
+
+  section.card ul li::before {
+    content: '\f058';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900 !important;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: #41c46a;
+    font-size: 1rem !important;
+    line-height: 1;
+  }
+
+  section.card p+ul {
+    margin-top: 18px;
+  }
+
+  /* Highlight Call To Action */
+  .cta {
+    background: #2389db;
+    color: #fff;
+    font-weight: 600 !important;
+    font-size: 1.3rem !important;
+    text-align: center;
+    padding: 18px 0;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgb(35 137 219 / 0.31);
+    cursor: default;
+    margin: 10px 0 32px;
+    user-select: none;
+    letter-spacing: 0.03em;
+  }
+
+  .join-info {
+    background: #41c46a;
+    border-radius: 12px;
+    color: #f7fafc;
+    font-weight: 500 !important;
+    font-size: 1.18rem !important;
+    padding: 20px 16px;
+    box-shadow: 0 6px 18px rgb(65 196 106 / 0.25);
+    margin-bottom: 16px;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .join-info b {
+    font-weight: 700 !important;
+  }
+
+  .info {
+    background: #e6eaef;
+    padding: 6px 14px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+    font-weight: 600 !important;
+    margin-inline: 4px;
+    display: inline-block;
+  }
+
+  .info:hover {
+    background: #d3dce7;
+  }
+
+  /* Subtle small text */
+  .small-note {
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.92rem !important;
+    margin-top: -8px;
+    margin-bottom: 24px;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 530px) {
+    header h1 {
+      font-size: 2rem !important;
+    }
+
+    header p {
+      font-size: 1rem !important;
+    }
+
+    section.card h2 {
+      font-size: 1.24rem !important;
+    }
+
+    section.card p,
+    section.card ul li {
+      font-size: 1rem !important;
+    }
+
+    .cta {
+      font-size: 1.1rem !important;
+    }
+
+    .join-info {
+      font-size: 1.06rem !important;
+    }
+  }
+</style>
+
+<body class="">
+  <header class="fixed top-0 bg-white z-50  overflow-hidden w-full">
+
+    <nav class="flex items-center justify-between container  my-2 relative py-1 xl:py-0">
+      <div class="flex items-center">
+        <!-- <a href="#!" class="flex w-[70px] md:w-[145px] h-[40px] md:h-[75px] relative z-[999]">
+          <img src="img/praveen-logo.png" alt="influencers logo" loading="lazy" width="200" height="70" class="flex" />
+        </a> -->
+        <p
+          class=" text-[12px] font-medium md:font-semibold md:text-[16px] md:leading-[1.4] text-black text-center mb-0 opacity-70">
+          SEBI Registered RA INH000018957
+        </p>
+      </div>
+      <div class="nav-area">
+        <button class="hamburger relative z-[999]">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="md:flex items-center">
+
+          <li class="mb-0 mr-[30px]">
+            <a class="nav-link" href="https://www.kandlesticks.com/investor-charter">Investor Charter</a>
+          </li>
+          <li class="mb-0 mr-[30px]">
+            <a class="nav-link" href="https://www.kandlesticks.com/contact">Contact</a>
+          </li>
+          <li class="mb-0 mr-[30px]">
+            <a class="nav-link" href="https://www.kandlesticks.com#about">About us</a>
+          </li>
+          <li class="mb-0 button-wrapper">
+            <a href="https://wa.me/919741444994"
+              class="button rounded-[10px] py-[12px] px-[20px] bg-orange min-w-[160px] inline-block text-black text-16 leading-[1.5]">
+              <div class="relative overflow-hidden">
+                <span class="button-content">Community</span>
+                <span class="button-content-hover">Community</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="min-h-[100vh] flex items-center justify-center  overflow-hidden relative md:pt-0 pt-6 bg-[#e5ebef]">
+      <div class="container relative">
+        <div class="flex md:flex-row flex-col items-center gap-3">
+          <div class="md:w-[50%] w-full flex flex-col justify-between">
+
+            <h1 class="text-28 md:text-[46px] my-1 font-bold leading-[1.2]">
+              KandleSticks - <br> Trading Community
+            </h1>
+            <p
+              class=" text-[18px] font-medium md:text-[24px] md:leading-[1.4] !text-blue md:text-left text-center mt-1 mb-3 md:mb-4">
+              Learn, share, and grow with fellow traders in a supportive, empowered environment.
+            </p>
+            <div class="max-w-[300px]">
+              <a href="https://wa.me/919741444994" target="_blank">
+                <button type="button"
+                  class="button rounded-[10px] py-[16px] md:py-[19px] px-[10px] md:px-[38px] bg-orange w-full inline-block text-black text-16 leading-none">
+                  <div class="relative overflow-hidden">
+                    <span class="button-content !font-bold py-[2px]">Join Community Now</span>
+                    <span class="button-content-hover !font-bold py-[2px]">Join Community Now</span>
+                  </div>
+                </button>
+              </a>
+            </div>
+
+          </div>
+          <div class="md:w-[50%] w-full flex flex-col items-center justify-between">
+            <img src="img/praveen-logo-cropped.png" class="w-[70%]" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="contain">
+      <section class="md:py-[80px] py-5 ">
+        <section class="card">
+          <h2><i class="fas fa-question-circle"></i> What is the Virtual Trading Community?</h2>
+          <p>
+            The Virtual Trading Community is an interactive space where traders come together to learn, share, and grow
+            — both technically and emotionally. It’s a place to practice market analysis, discuss trading ideas, and
+            build confidence, all without the pressure of real money.
+          </p>
+          <p>This is not a trade recommendation group, but a learning and support ecosystem for traders who want to
+            think independently, develop discipline, and find motivation through collective growth.</p>
+
+        </section>
+
+        <div class="max-w-[300px] mx-auto mb-[48px]">
+          <a href="https://wa.me/919741444994" target="_blank">
+            <button type="button"
+              class="button rounded-[10px] py-[16px] md:py-[19px] px-[10px] md:px-[38px] bg-orange w-full inline-block text-black text-16 leading-none">
+              <div class="relative overflow-hidden">
+                <span class="button-content !font-semibold py-[2px]">Join Community Now</span>
+                <span class="button-content-hover !font-semibold py-[2px]">Join Community Now</span>
+              </div>
+            </button>
+          </a>
+        </div>
+
+        <section class="card">
+          <h2><i class="fas fa-bullseye"></i> Our Purpose</h2>
+          <ul>
+            <li>Share market outlooks and trading perspectives</li>
+            <li>Learn from diverse views and real-time discussions</li>
+            <li>Build emotional strength and discipline for consistent trading</li>
+            <li>Connect with like-minded traders and overcome isolation</li>
+          </ul>
+        </section>
+
+        <div class="max-w-[300px] mx-auto mb-[48px]">
+          <a href="https://wa.me/919741444994" target="_blank">
+            <button type="button"
+              class="button rounded-[10px] py-[16px] md:py-[19px] px-[10px] md:px-[38px] bg-orange w-full inline-block text-black text-16 leading-none">
+              <div class="relative overflow-hidden">
+                <span class="button-content !font-semibold py-[2px]">Join Community Now</span>
+                <span class="button-content-hover !font-semibold py-[2px]">Join Community Now</span>
+              </div>
+            </button>
+          </a>
+        </div>
+
+        <section class="card">
+          <h2><i class="fas fa-star"></i> What Makes Us Different</h2>
+          <ul>
+            <li>No Tips, No buy/sell calls — just analysis, logic, and learning</li>
+            <li>Community Support: A network where traders lift each other up</li>
+            <li>Emotional Resilience: Helping members handle fear, greed, and self-doubt</li>
+            <li>Mutual Respect: Every view matters; no arguments, only shared growth</li>
+          </ul>
+        </section>
+
+        <div class="max-w-[300px] mx-auto mb-[48px]">
+          <a href="https://wa.me/919741444994" target="_blank">
+            <button type="button"
+              class="button rounded-[10px] py-[16px] md:py-[19px] px-[10px] md:px-[38px] bg-orange w-full inline-block text-black text-16 leading-none">
+              <div class="relative overflow-hidden">
+                <span class="button-content !font-semibold py-[2px]">Join Community Now</span>
+                <span class="button-content-hover !font-semibold py-[2px]">Join Community Now</span>
+              </div>
+            </button>
+          </a>
+        </div>
+
+        <section class="gridy">
+          <h2 class="text-center"><i class="fas fa-star"></i> How the Community Works?</h2>
+          <p class="text-center">To maintain clarity, structure, and value for all members, the Community follows the guidelines below </p>
+          <div class="grid md:grid-cols-2 mt-[28px] gap-2">
+            <section class="card !mb-0">
+              <h2><i class="fas fa-cogs"></i> Mode</h2>
+              <p>
+               The Community functions virtually through online platforms such as Zoom, Microsoft Teams, or Zoho Meetings. 
+               
+              </p>
+              <p>Sessions are typically held during market hours, though not necessarily on all days. Members may participate using video, audio, or text, based on their comfort and preference.</p>     
+            </section>
+            <section class="card !mb-0">
+              <h2><i class="fas fa-project-diagram"></i> Structure</h2>
+               <ul>
+                  <li>Daily or weekly discussions on market outlooks and setups.</li>
+                  <li>Members to present their charts and analysis during these live sessions.</li>
+                  <li>Members should not expect the Moderator or Administrator to lead or conduct every session. The Community thrives on collective participation, where each member contributes to learning and discussion.</li>
+               </ul>
+            </section>
+            <section class="card !mb-0">
+              <h2><i class="fas fa-users"></i> Participation</h2>
+               <ul>
+                  <li>Members are encouraged to share their analysis, observations, and reflections regularly.</li>
+                  <li>Attendance in live discussions is recommended for consistent engagement.</li>
+               </ul>
+            </section>
+            <section class="card !mb-0">
+              <h2><i class="fas fa-lightbulb"></i> Learning Philosophy</h2>
+               <ul>
+                  <li>The Community believes in “teaching you how to fish, not giving you fish.”</li>
+                  <li>No one will provide trade tips — learning happens through sharing and observing.</li>
+               </ul>
+            </section>
+            <section class="card !mb-0">
+              <h2><i class="fas fa-life-ring"></i> Support System</h2>
+               <p>Members are welcome to discuss emotional challenges faced in trading.</p>
+               <p>The aim is to build a positive, encouraging, and non-judgmental environment.</p>
+            </section>
+             <section class="card !mb-0">
+              <h2><i class="fas fa-comments"></i> Communication</h2>
+               <p>The primary mode of communication will be through virtual collaboration live meetings.
+</p>
+               <p>All official announcements or updates will be made by the Community Administrator only.</p>
+            </section>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2><i class="fas fa-hand-holding-usd"></i> Cost &amp; Contribution</h2>
+          <p>
+            Participation in this community comes with a nominal cost, which helps cover infrastructure, tools, and
+            administrative expenses required to maintain a quality learning and discussion space.
+          </p>
+          <p>This is not a commercial venture, but a collective effort to build and sustain a healthy environment for
+            continuous trader development.</p>
+          <h2><i class="fas fa-balance-scale"></i> Limitation of Liability</h2>
+          <p>The Community Administrator, moderators, and other members shall not be held liable for any financial loss, emotional distress, or consequences arising from the use of information discussed in the Community.
+</p>
+        </section>
+
+        <section class="card">
+          <h2><i class="fab fa-whatsapp"></i> How to Join?</h2>
+          <p>
+            Whatsapp to <a class="info" href="https://wa.me/919741444994" target="_blank" rel="noopener noreferrer">+91 97414 44994</a> (only whatsapp – no call).
+          </p>
+          <p>We will need to know you – so KYC (Know Your Customer) is a must plus a few T&Cs to agree upon.</p>
+        </section>
+      </section>
+      
+
+
+    </div>
+  </main>
+  <footer>
+    <!-- <div class="block md:hidden">
+      <div
+        class="bg-black fixed footer-banner bottom-0 left-0 translate-y-[100%] transition-all w-full z-50 duration-300">
+        <div class="flex items-center justify-between py-1 px-2 w-full">
+          <div class="flex flex-col items-start justify-between text-white">
+            <span class="font-semibold">Offer Ending Soon</span>
+          </div>
+          <div>
+            <a href=""
+              class="button py-[12px] px-[20px] rounded-[4px] font-semibold uppercase bg-orange min-w-[130px] inline-block text-white text-16 leading-[1.5]">
+              <div class="relative overflow-hidden">
+                <span class="button-content">Enroll Now</span>
+                <span class="button-content-hover">Enroll Now</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <section id="contact" class="pt-[40px] md:pt-[73px] pb-[90px] md:pb-[58px] card-gradient scrollspy-section">
+      <div class="container text-left md:text-center">
+        <h2 class="text-white text-20 leading-[1.3] font-semibold mb-1 md:mb-2">
+          KandleSticks
+        </h2>
+        <p class="text-18 text-white/50 leading-[1.44] font-normal">
+          &copy; All Rights Reserved.
+        </p>
+        <div
+          class="flex items-start md:items-center justify-center md:flex-row flex-col mb-[30px] mt-[30px] md:mt-[50px] gap-3">
+          <a href="https://www.kandlesticks.com/disclosure">
+            <p class="mb-0 text-16 leading-none text-white font-medium">
+              Disclosures
+            </p>
+          </a>
+          <a href="https://www.kandlesticks.com/complaint-data">
+            <p class="mb-0 text-16 leading-none text-white font-medium">
+              Complaint Data
+            </p>
+          </a>
+          <a href="https://www.kandlesticks.com/grievance-redressal">
+            <p class="mb-0 text-16 leading-none text-white font-medium">
+              Grievance Redressal Process
+            </p>
+          </a>
+        </div>
+        <div class="mb-[83px] md:mb-[52px]">
+          <a class="text-16 text-white font-medium" href="https://smartodr.in/">
+            https://smartodr.in
+          </a>
+        </div>
+        <ul class="flex items-center justify-start md:justify-center">
+          <li class="mb-0 mr-[33px]">
+            <a href="https://www.youtube.com/@KandleSticks">
+              <img loading="lazy" width="26" height="26" src="img/rigi/footer/youtube.svg" alt="youtube" />
+            </a>
+          </li>
+          <li class="mb-0 mr-[33px]">
+            <a href="https://www.facebook.com/share/1DaGtpm9jb/?mibextid=wwXIfr" target="_blank">
+              <img loading="lazy" width="26" height="26" src="img/rigi/footer/fb.svg" alt="facebook" />
+            </a>
+          </li>
+          <li class="mb-0 mr-[33px]">
+            <a href="https://www.instagram.com/kandlesticks_?igsh=cWV1b213M2tvNGsz&utm_source=qr" target="_blank">
+              <img loading="lazy" width="26" height="26" src="img/rigi/footer/insta.svg" alt="instagram" />
+            </a>
+          </li>
+          <!-- <li class="mb-0 mr-[33px]">
+            <a href="" target="_blank">
+              <img loading="lazy" width="26" height="26" src="img/rigi/footer/linkedin.svg" alt="linkedin" />
+            </a>
+          </li> -->
+          <li class="mb-0 mr-[33px]">
+            <a href="https://x.com/SticksKandle" target="_blank">
+              <img loading="lazy" width="26" height="26" src="img/rigi/footer/twitter.svg" alt="twitter" />
+            </a>
+          </li>
+          <li class="mb-0">
+            <a href="https://t.me/KandleSticks">
+              <img loading="lazy" width="26" height="26" src="img/rigi/footer/telegram.svg" alt="telegram" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </footer>
+
+  <script src="js/tiny-slider.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
