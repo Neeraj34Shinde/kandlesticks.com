@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KandleSticks</title>
+  <meta name="description" content="Learn with KandleSticks!
+  We believe that, you can also be a pro trader">
+  <meta property="og:title" content="KandleSticks">
+  <meta property="og:description" content="Learn with KandleSticks!
+  We believe that, you can also be a pro trader">
+  <meta property="og:image" content="https://www.kandlesticks.com/img/The Ultimate Elliott Wave Training.webp">
+  <link rel="icon" type="image/x-icon" href="https://www.kandlesticks.com/img/praveen-logo-cropped.png">
+  <meta property="og:url" content="https://www.kandlesticks.com/elliott-wave-training">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tailwind.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fa;
+    color: #30343f;
+    line-height: 1.6;
+  }
+
+  /* Container */
+  .contain {
+    max-width: 900px;
+    margin: 48px auto 64px;
+    padding: 0 20px;
+  }
+
+  /* Section Cards */
+  section.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px 32px 32px;
+    box-shadow: 0 8px 24px rgb(107 119 180 / 0.06);
+    margin-bottom: 48px;
+    border: 1px solid #e9ecef;
+  }
+
+  section.card h2 {
+    font-weight: 600 !important;
+    font-size: 1.52rem !important;
+    color: #2389db;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  section.gridy {
+   
+    margin-bottom: 48px;
+    
+  }
+
+  section.gridy h2 {
+    font-weight: 600 !important;
+    font-size: 1.52rem !important;
+    color: #2389db;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  section.card h2 i {
+    color: #41c46a;
+    font-size: 1.5rem !important;
+  }
+
+  section.card p,
+  section.card ul {
+    font-size: 1.1rem !important;
+    color: #30343f;
+  }
+
+  section.card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 12px;
+  }
+
+  section.card ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 14px;
+    font-weight: 500 !important;
+    color: #495057;
+  }
+
+  section.card ul li::before {
+    content: '\f058';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900 !important;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: #41c46a;
+    font-size: 1rem !important;
+    line-height: 1;
+  }
+
+  section.card p+ul {
+    margin-top: 18px;
+  }
+
+  /* Highlight Call To Action */
+  .cta {
+    background: #2389db;
+    color: #fff;
+    font-weight: 600 !important;
+    font-size: 1.3rem !important;
+    text-align: center;
+    padding: 18px 0;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgb(35 137 219 / 0.31);
+    cursor: default;
+    margin: 10px 0 32px;
+    user-select: none;
+    letter-spacing: 0.03em;
+  }
+
+  .join-info {
+    background: #41c46a;
+    border-radius: 12px;
+    color: #f7fafc;
+    font-weight: 500 !important;
+    font-size: 1.18rem !important;
+    padding: 20px 16px;
+    box-shadow: 0 6px 18px rgb(65 196 106 / 0.25);
+    margin-bottom: 16px;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .join-info b {
+    font-weight: 700 !important;
+  }
+
+  .info {
+    background: #e6eaef;
+    padding: 6px 14px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+    font-weight: 600 !important;
+    margin-inline: 4px;
+    display: inline-block;
+  }
+
+  .info:hover {
+    background: #d3dce7;
+  }
+
+  /* Subtle small text */
+  .small-note {
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.92rem !important;
+    margin-top: -8px;
+    margin-bottom: 24px;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 530px) {
+    header h1 {
+      font-size: 2rem !important;
+    }
+
+    header p {
+      font-size: 1rem !important;
+    }
+
+    section.card{
+      padding: 20px 20px;
+    }
+
+    section.card h2 {
+      font-size: 1.24rem !important;
+    }
+
+    section.card p,
+    section.card ul li {
+      font-size: 1rem !important;
+    }
+
+    .cta {
+      font-size: 1.1rem !important;
+    }
+
+    .join-info {
+      font-size: 1.06rem !important;
+    }
+  }
+</style>
+
+<body class="">
+  <header class="fixed top-0 bg-white z-50  overflow-hidden w-full">
+
+    <nav class="flex items-center justify-between container  my-2 relative py-1 xl:py-0">
+      <div class="flex items-center">
+        <!-- <a href="#!" class="flex w-[70px] md:w-[145px] h-[40px] md:h-[75px] relative z-[999]">
+          <img src="img/praveen-logo.png" alt="influencers logo" loading="lazy" width="200" height="70" class="flex" />
+        </a> -->
+        <p
+          class=" text-[12px] font-medium md:font-semibold md:text-[16px] md:leading-[1.4] text-black text-center mb-0 opacity-70">
+          SEBI Registered RA INH000018957
+        </p>
+      </div>
+      <div class="nav-area">
+        <button class="hamburger relative z-[999]">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="md:flex items-center">
+
+          <li class="mb-0 mr-[30px]">
+            <a class="nav-link" href="https://www.kandlesticks.com/investor-charter">Investor Charter</a>
+          </li>
+          <li class="mb-0 mr-[30px]">
+            <a class="nav-link" href="https://www.kandlesticks.com/contact">Contact</a>
+          </li>
+          <li class="mb-0 mr-[30px]">
+            <a class="nav-link" href="https://www.kandlesticks.com#about">About us</a>
+          </li>
+          <li class="mb-0 button-wrapper">
+            <a href="mailto:unboundnifty@gmail.com" target="_blank" class="button rounded-[10px] py-[12px] px-[20px] bg-orange min-w-[160px] inline-block text-black text-16 leading-[1.5]">
+              <div class="relative overflow-hidden">
+                <span class="button-content">Community</span>
+                <span class="button-content-hover">Community</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="min-h-[100vh] flex items-center justify-center  overflow-hidden relative md:pt-0 pt-6 bg-[#e5ebef]">
+      <div class="container relative">
+        <div class="flex md:flex-row flex-col items-center gap-3">
+          <div class="md:w-[50%] w-full flex flex-col justify-between">
+
+            <h1 class="text-[28px] md:text-[46px] my-1 font-bold leading-[1.2] text-center md:text-left">
+             The Power of Waves: <br>Elliott Wave Training
+            </h1>
+            <p
+              class=" text-[18px] font-medium md:text-[24px] md:leading-[1.4] !text-blue md:text-left text-center mt-1 mb-[14px]">
+              Predict market trends with confidence—learn, apply, and grow as a trader.
+            </p>
+            <p
+              class=" text-[16px] font-medium md:text-[20px] md:leading-[1.4] !text-blue md:text-left text-center mt-1 mb-3 md:mb-4">
+              Email us at <a class="underline" href="mailto:unboundnifty@gmail.com" target="_blank">unboundnifty@gmail.com</a>
+            </p>
+            <div class="max-w-[300px] mx-auto md:mx-0">
+              <a href="mailto:unboundnifty@gmail.com" target="_blank">
+                <button type="button"
+                  class="button rounded-[10px] py-[16px] md:py-[19px] px-[34px] md:px-[38px] bg-orange w-full inline-block text-black text-16 leading-none">
+                  <div class="relative overflow-hidden">
+                    <span class="button-content !font-bold py-[2px]">Enroll Now</span>
+                    <span class="button-content-hover !font-bold py-[2px]">Enroll Now</span>
+                  </div>
+                </button>
+              </a>
+            </div>
+
+          </div>
+          <div class="md:w-[50%] w-full flex flex-col items-center justify-between">
+            <img src="img/praveen-logo-cropped.png" class="w-[70%]" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="contain">
+      <section class="md:py-[80px] py-5 ">
+        <section class="card">
+          <h2><i class="fas fa-play-circle"></i> Course Format</h2>
+          <p>
+           Structured, step-by-step recorded lessons covering Dow Theory, RSI, Fibonacci, and Elliott Wave applications.
+          </p>
+          <p>Live sessions designed for practical growth—not theory. Bring your charts, analyses, and learnings to discuss and evolve in real market contexts.</p>
+        </section>
+
+        <section class="card">
+          <h2><i class="fas fa-graduation-cap"></i> Learning Philosophy</h2>
+          <p>We don’t give you the fish. We teach you how to fish. Build confidence to make your own market decisions, not just follow someone else’s analysis.</p>
+        </section>
+
+        <section class="card">
+          <h2><i class="fas fa-brain"></i> Outcomes & Benefits</h2>
+          <ul>
+            <li>Deep understanding of Elliott Waves—see market structure and think in waves</li>
+            <li>Clarity of trade setups and the discipline to trade with purpose</li>
+            <li>Active participation encourages independent analysis and lasting growth</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2><i class="fas fa-calendar-alt"></i> Duration</h2>
+          <p>
+           Full training journey over <b>3 months</b>, combining structured learning and real-time market participation.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2><i class="fas fa-envelope-open-text"></i>More Details & Enrollment</h2>
+          <p>
+            Email us at <a class="info underline" href="mailto:unboundnifty@gmail.com" target="_blank">unboundnifty@gmail.com</a> (email only – no calls).
+          </p>
+        </section>
+         <div class="max-w-[300px] mx-auto">
+              <a href="mailto:unboundnifty@gmail.com" target="_blank">
+                <button type="button"
+                  class="button rounded-[10px] py-[16px] md:py-[19px] px-[34px] md:px-[38px] bg-orange w-full inline-block text-black text-16 leading-none">
+                  <div class="relative overflow-hidden">
+                    <span class="button-content !font-bold py-[2px]">Enroll Now</span>
+                    <span class="button-content-hover !font-bold py-[2px]">Enroll Now</span>
+                  </div>
+                </button>
+              </a>
+            </div>
+      </section>
+      
+
+
+    </div>
+  </main>
+  <footer>
+    <section id="contact" class="pt-[40px] md:pt-[73px] pb-[90px] md:pb-[58px] card-gradient scrollspy-section">
+      <div class="container">
+        <h2 class="text-white text-20 leading-[1.3] font-semibold mb-1">
+          KandleSticks
+        </h2>
+        <p class="text-18 text-white/50 leading-[1.44] font-normal">
+          &copy; All Rights Reserved.
+        </p>
+        <div class="grid md:grid-cols-2 gap-2 md:gap-4 lg:gap-5">
+        <div class="flex flex-col gap-2">
+          <div>
+            <p class="text-16 font-semibold mb-0 text-white">Name</p>
+            <p class="text-14 mb-0 text-white">Praveen Kumar Girotra Proprietor of KandleSticks</p>
+          </div>
+          <div>
+            <p class="text-16 font-semibold mb-0 text-white">SEBI Registration No</p>
+            <p class="text-14 mb-0 text-white">INH000018957</p>
+          </div>
+          <div>
+            <p class="text-16 font-semibold mb-0 text-white">Address</p>
+            <p class="text-14 mb-0 text-white">Tower A, 5th floor,Survey no 51, 3.51 4.51 2 39 5, Devarabisanahalli Village, Banglore, Karnataka, BANGALORE, KARNATAKA, 560103</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <div>
+            <p class="text-16 font-semibold mb-0 text-white">Smart ODR portal</p>
+            <p class="text-14 mb-0 text-white"><a class="font-medium underline text-white" href="https://smartodr.in/">https://smartodr.in/</a></p>
+          </div>
+          <div>
+            <p class="text-16 font-semibold mb-0 text-white">Disclosure</p>
+            <p class="text-14 mb-0 text-white"><a class="font-medium underline text-white" href="https://www.kandlesticks.com/disclosure">https://www.kandlesticks.com/disclosure/</a></p>
+          </div>
+          
+          <div>
+            <p class="text-16 font-semibold mb-0 text-white">Complaint Data</p>
+            <p class="text-14 mb-0 text-white"><a class="font-medium underline text-white" href="https://www.kandlesticks.com/complaint-data">https://www.kandlesticks.com/complaint-data/</a></p>
+          </div>
+          <div>
+            <p class="text-16 font-semibold mb-0 text-white">Grievance Redressal Process</p>
+            <p class="text-14 mb-0 text-white"><a class="font-medium underline text-white" href="https://www.kandlesticks.com/grievance-redressal">https://www.kandlesticks.com/grievance-redressal/</a></p>
+          </div>
+        </div>
+      </div>
+        <ul class="flex items-center justify-start mt-3">
+          <li class="mb-0 mr-[33px]">
+            <a href="https://www.youtube.com/@KandleSticks">
+              <img loading="lazy" width="26" height="26" src="img/rigi/footer/youtube.svg" alt="youtube" />
+            </a>
+          </li>
+          <li class="mb-0 mr-[33px]">
+            <a href="https://www.facebook.com/share/1DaGtpm9jb/?mibextid=wwXIfr" target="_blank">
+              <img loading="lazy" width="26" height="26" src="img/rigi/footer/fb.svg" alt="facebook" />
+            </a>
+          </li>
+          <li class="mb-0 mr-[33px]">
+            <a href="https://www.instagram.com/kandlesticks_?igsh=cWV1b213M2tvNGsz&utm_source=qr" target="_blank">
+              <img loading="lazy" width="26" height="26" src="img/rigi/footer/insta.svg" alt="instagram" />
+            </a>
+          </li>
+          <!-- <li class="mb-0 mr-[33px]">
+            <a href="" target="_blank">
+              <img loading="lazy" width="26" height="26" src="img/rigi/footer/linkedin.svg" alt="linkedin" />
+            </a>
+          </li> -->
+          <li class="mb-0 mr-[33px]">
+            <a href="https://x.com/SticksKandle" target="_blank">
+              <img loading="lazy" width="26" height="26" src="img/rigi/footer/twitter.svg" alt="twitter" />
+            </a>
+          </li>
+          <li class="mb-0">
+            <a href="https://t.me/KandleSticks">
+              <img loading="lazy" width="26" height="26" src="img/rigi/footer/telegram.svg" alt="telegram" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </footer>
+
+  <script src="js/tiny-slider.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
