@@ -949,8 +949,8 @@ video {
   margin-top: 59px;
 }
 
-.mb-\[\] {
-  margin-bottom: ;
+.mb-\[40\] {
+  margin-bottom: 40;
 }
 
 .block {
@@ -975,6 +975,10 @@ video {
 
 .hidden {
   display: none;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
 }
 
 .h-4 {
@@ -1394,6 +1398,10 @@ video {
   border-radius: 1rem;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .rounded-\[10px\] {
   border-radius: 10px;
 }
@@ -1418,12 +1426,21 @@ video {
   border-width: 1px;
 }
 
+.border-\[2px\] {
+  border-width: 2px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
 
 .border-t {
   border-top-width: 1px;
+}
+
+.border-\[\#ffcd05\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 205 5 / var(--tw-border-opacity, 1));
 }
 
 .border-black\/\[0\.10\] {
@@ -1462,6 +1479,16 @@ video {
 
 .border-white\/\[0\.32\] {
   border-color: rgb(255 255 255 / 0.32);
+}
+
+.border-\[\#feb23a\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(254 178 58 / var(--tw-border-opacity, 1));
+}
+
+.border-\[\#028cd8\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(2 140 216 / var(--tw-border-opacity, 1));
 }
 
 .\!bg-darktheme {
@@ -2229,6 +2256,12 @@ video {
 
 .opacity-70 {
   opacity: 0.7;
+}
+
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-xl {
@@ -3639,6 +3672,10 @@ button:disabled {
     width: 76px;
   }
 
+  .md\:w-\[40\%\] {
+    width: 40%;
+  }
+
   .md\:max-w-\[140px\] {
     max-width: 140px;
   }
@@ -3661,6 +3698,10 @@ button:disabled {
 
   .md\:max-w-full {
     max-width: 100%;
+  }
+
+  .md\:max-w-\[300px\] {
+    max-width: 300px;
   }
 
   .md\:translate-y-\[110\%\] {
@@ -3700,6 +3741,10 @@ button:disabled {
     justify-content: center;
   }
 
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
   .md\:gap-2 {
     gap: 16px;
   }
@@ -3724,6 +3769,14 @@ button:disabled {
     gap: 56px;
   }
 
+  .md\:gap-\[\] {
+    gap: ;
+  }
+
+  .md\:gap-\[50px\] {
+    gap: 50px;
+  }
+
   .md\:gap-y-\[16px\] {
     row-gap: 16px;
   }
@@ -3734,6 +3787,10 @@ button:disabled {
 
   .md\:border {
     border-width: 1px;
+  }
+
+  .md\:border-\[3px\] {
+    border-width: 3px;
   }
 
   .md\:border-r {
